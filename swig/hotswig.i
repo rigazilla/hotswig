@@ -1,4 +1,4 @@
-%module HotrodClient
+%module Hotswig
 %include "std_string.i"
 %include "std_vector.i"
 %{
