@@ -28,6 +28,6 @@ endif (${TARGET_LANG} STREQUAL "octave")
 include_directories(include prebuilt/usr/include ${TARGET_LANG_INCLUDE})
 link_directories(${PREBUILT_DIR}/usr/lib)
 set_property(SOURCE swig/hotswig.i PROPERTY CPLUSPLUS ON)
-swig_add_module(HotrodClient ${TARGET_LANG} swig/hotswig.i src/hotrod-facade.cpp)
-swig_link_libraries (HotrodClient hotrod)
+swig_add_module(Hotswig ${TARGET_LANG} swig/hotswig.i src/hotrod-facade.cpp)
+swig_link_libraries (Hotswig hotrod)
 
