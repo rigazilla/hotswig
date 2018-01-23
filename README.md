@@ -7,7 +7,7 @@ The goal of the Hotswig project is to build a Swig based facade in front of the 
 
 ## Requirements
 
-* a prebuilt of the C++ client (build with the same compiler version we want to use)
+* a prebuilt of the C++ client (build with the same compiler version we want to use). It should be unpack under ./prebuilt to use the default settings.
 * swig 2.8.11
 
 
@@ -27,6 +27,7 @@ In practice the procedure change slightly from language to language. Three examp
 
 ### Ruby
     cd ruby
+    swig -c++ -ruby -outcurrentdir -I../include ../swig/hotswig.i
     ruby extconf.rb
     make && make install
 
