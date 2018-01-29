@@ -1,13 +1,13 @@
-require 'hotswig'
-conf = Hotswig::Configuration.new
+require 'Infinispan'
+conf = Infinispan::Configuration.new
 conf.addServer("localhost",11222)
 conf.setProtocol("2.4")
-manager = Hotswig::RemoteCacheManager.new(conf)
+manager = Infinispan::RemoteCacheManager.new(conf)
 manager.start()
-cache = Hotswig::RemoteCache.new(manager)
-key = Hotswig::UCharVector.new
+cache = Infinispan::RemoteCache.new(manager)
+key = Infinispan::UCharVector.new
 key.push(56)
-value = Hotswig::UCharVector.new
+value = Infinispan::UCharVector.new
 value.push(8)
 cache.put(key,value)
 res = cache.get(key)
