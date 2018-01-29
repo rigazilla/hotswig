@@ -8,7 +8,7 @@ template <class K, class V> class RemoteCache;
 class ConfigurationBuilder;
 }
 }
-namespace HotSwig {
+namespace Infinispan {
 
 class RemoteCacheManager;
 class RemoteCache;

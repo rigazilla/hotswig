@@ -6,7 +6,7 @@
 #include "infinispan/hotrod/RemoteCache.h"
 #include <infinispan/hotrod/RemoteCacheManager.h>
 
-namespace HotSwig
+namespace Infinispan
 {
 class IdentityMarshaller : public infinispan::hotrod::Marshaller<std::vector<unsigned char> > {
 public:

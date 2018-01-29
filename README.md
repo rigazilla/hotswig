@@ -43,20 +43,20 @@ Now test your client
 Test your client in a python shell
 
     LD_LIBRARY_PATH=../prebuild/usr/lib python
-    import Hotswig
-    conf=Hotswig.Configuration()
+    import Infinispan
+    conf=Infinispan.Configuration()
     conf.addServer("localhost",11222)
     conf.setProtocol("2.4")
-    manager=Hotswig.RemoteCacheManager(conf)
+    manager=Infinispan.RemoteCacheManager(conf)
     manager.start()
-    key=Hotswig.UCharVector()
+    key=Infinispan.UCharVector()
     key.push_back(56)
-    value=Hotswig.UCharVector()
+    value=Infinispan.UCharVector()
     value.push_back(8)
-    cache=Hotswig.RemoteCache(manager)
+    cache=Infinispan.RemoteCache(manager)
     cache.put(key,value)
     res=cache.get(key)
-    print res
+    print res.pop()
 
 ### Octave
     mkdir build && cd build
@@ -66,15 +66,16 @@ Test your client in a python shell
 Test your client in a Octave session
 
     LD_LIBRARY_PATH=../prebuilt/usr/lib octave
-    conf = Hotswig.Configuration()
+    Infinispan
+    conf = Infinispan.Configuration()
     conf.addServer("localhost",11222)
     conf.setProtocol("2.4")
-    manager=Hotswig.RemoteCacheManager(conf)
+    manager=Infinispan.RemoteCacheManager(conf)
     manager.start()
-    cache = Hotswig.RemoteCache(manager)
-    key = Hotswig.UCharVector()
+    cache = Infinispan.RemoteCache(manager)
+    key = Infinispan.UCharVector()
     key.push_back(56)
-    value = Hotswig.UCharVector()
+    value = Infinispan.UCharVector()
     value.push_back(8)
     cache.put(key,value)
     res = cache.get(key)

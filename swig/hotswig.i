@@ -1,4 +1,4 @@
-%module Hotswig
+%module Infinispan
 %include "std_string.i"
 %include "std_vector.i"
 %{
